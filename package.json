@@ -1,0 +1,25 @@
+{
+  "name": "forever-ecommerce",
+  "version": "1.0.0",
+  "description": "Premium AI-Enhanced E-commerce Platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm start",
+    "client": "cd frontend && npm start",
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev": "concurrently \"cd backend && npm start\" \"cd frontend && npm start\""
+  },
+  "keywords": [
+    "ecommerce",
+    "react",
+    "node",
+    "mongodb",
+    "luxury"
+  ],
+  "author": "Vaibhav",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

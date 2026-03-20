@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Prata&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Outfit', sans-serif;
+}
+
+.prata-regular {
+    font-family: "Prata", serif;
+}
+
+body {
+    @apply bg-[#fafafa] text-[#414141];
+}
+
+a {
+    @apply transition-all duration-300;
+}
+
+button {
+  @apply transition-all duration-300;
+}
