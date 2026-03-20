@@ -100,7 +100,7 @@ const Footer = () => {
                                 <div className='w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-500'>
                                     <Mail size={14} />
                                 </div>
-                                support@forever.com
+                                support@VHforever.com
                             </li>
                             <li className='flex items-center gap-4 text-xs font-bold text-gray-400'>
                                 <div className='w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-500'>
@@ -124,7 +124,7 @@ const Footer = () => {
                     </div>
                     
                     <p className='text-[9px] font-black text-gray-600 uppercase tracking-[0.3em]'>
-                        © {currentYear} FOREVER INC. ENGINEERED WITH PRECISION.
+                        © {currentYear} FOREVER. VH. INC. ENGINEERED WITH PRECISION.
                     </p>
 
                     <div className='flex gap-6'>

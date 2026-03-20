@@ -1,3 +1,8 @@
+# Deployment 
+
+Vercel :- "https://shopping-e-commerce-website-brown.vercel.app/"
+Render :- "https://shopping-e-commerce-website.onrender.com"
+
 # 💎 Forever Luxury E-commerce Platform
 
 A state-of-the-art, AI-enhanced e-commerce solution built with the MERN stack. Designed with a premium aesthetic, featuring glassmorphism, dynamic animations, and a seamless user experience.
