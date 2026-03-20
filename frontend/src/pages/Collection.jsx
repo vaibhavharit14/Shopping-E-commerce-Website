@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext'
-import Title from '../components/Title';
+
 import ProductItem from '../components/ProductItem';
 import { ChevronRight, Filter, SlidersHorizontal, Check, Mail } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';

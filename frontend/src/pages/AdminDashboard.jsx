@@ -1,14 +1,14 @@
 import { useState, useContext, useMemo, useEffect } from "react";
-import { products as localProducts } from "../assets/assets";
+
 import { ShopContext } from "../context/ShopContext";
 import { toast } from "react-toastify";
-import { Package, Truck, MapPin, ShoppingBag, DollarSign, Calendar, CreditCard, ArrowLeft, PlusCircle, Image as ImageIcon, Type, Tag, Layers, IndianRupee, Save, X, Ticket, ShieldCheck, ChevronRight, Plus, Trash2 } from "lucide-react";
+import { Package, Truck, MapPin, ShoppingBag, DollarSign, Calendar, CreditCard, ArrowLeft, PlusCircle, Image as ImageIcon, Type, Layers, Save, X, Ticket, ShieldCheck, ChevronRight, Plus, Trash2 } from "lucide-react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import AdminCoupons from "../components/AdminCoupons";
 
 export default function AdminDashboard() {
-  const { adminOrders, fetchAllOrders, updateOrder, apiProducts, allProducts, getProductsData, backendUrl } = useContext(ShopContext);
+  const { adminOrders, fetchAllOrders, updateOrder, allProducts, getProductsData, backendUrl } = useContext(ShopContext);
   const [products, setProducts] = useState(allProducts);
   const [editProduct, setEditProduct] = useState(null);
   const [formData, setFormData] = useState({ name: "", price: "", stock: "" });
@@ -31,7 +31,7 @@ export default function AdminDashboard() {
   useEffect(() => {
     setProducts(allProducts);
     fetchAllOrders();
-  }, [allProducts]);
+  }, [allProducts, fetchAllOrders]);
 
   const statusOptions = ['Order Placed', 'Processing', 'Shipped', 'Out for Delivery', 'Delivered'];
 

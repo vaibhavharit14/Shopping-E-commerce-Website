@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useCallback } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { ShopContext } from '../context/ShopContext';
@@ -15,7 +15,7 @@ const AdminCoupons = () => {
     const [discount, setDiscount] = useState('');
     const [expiryDate, setExpiryDate] = useState('');
 
-    const fetchCoupons = async () => {
+    const fetchCoupons = useCallback(async () => {
         const token = localStorage.getItem('token');
         if (!token) return;
         
@@ -28,7 +28,7 @@ const AdminCoupons = () => {
             console.error(error);
             toast.error("Failed to fetch coupons");
         }
-    };
+    }, [backendUrl]);
 
     const handleCreateCoupon = async (e) => {
         e.preventDefault();
@@ -73,7 +73,7 @@ const AdminCoupons = () => {
 
     useEffect(() => {
         fetchCoupons();
-    }, []);
+    }, [fetchCoupons]);
 
     return (
         <motion.div 

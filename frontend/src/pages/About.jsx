@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ShieldCheck, Zap, Heart, Target, Sparkles, TrendingUp } from 'lucide-react'
+import { ShieldCheck, Zap, Heart, Target } from 'lucide-react'
 import Title from '../components/Title'
 import NewsletterBox from '../components/NewsletterBox'
 import { assets } from '../assets/assets'

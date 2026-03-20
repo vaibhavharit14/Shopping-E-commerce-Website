@@ -4,9 +4,8 @@ import { ShopContext } from '../context/ShopContext';
 import { useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Lock, User, ArrowRight, Sparkles, ShieldCheck, Github } from 'lucide-react';
-import { GoogleOAuthProvider, useGoogleLogin } from '@react-oauth/google';
-import { jwtDecode } from "jwt-decode";
+import { Mail, Lock, User, ArrowRight, Sparkles, ShieldCheck } from 'lucide-react';
+import { useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
 
 const Login = () => {

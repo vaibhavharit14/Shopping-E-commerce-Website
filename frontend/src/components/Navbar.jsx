@@ -1,4 +1,4 @@
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { ShopContext } from "../context/ShopContext";
@@ -9,9 +9,9 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Navbar() {
   const { user, logout } = useContext(AuthContext);
   const { setShowSearch, getCartCount } = useContext(ShopContext);
-  const navigate = useNavigate();
-  const location = useLocation();
-  const isHome = location.pathname === "/";
+
+
+
   const [scrolled, setScrolled] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 

@@ -1,0 +1,47 @@
+﻿
+> frontend@0.1.0 build
+> react-scripts build
+
+Creating an optimized production build...
+
+Treating warnings as errors because process.env.CI = true.
+Most CI servers set it automatically.
+
+Failed to compile.
+
+[eslint] 
+src\components\AdminCoupons.jsx
+  Line 76:8:  React Hook useEffect has a missing dependency: 'fetchCoupons'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\CartTotal.jsx
+  Line 1:29:  'useState' is defined but never used  no-unused-vars
+  Line 3:8:   'Title' is defined but never used     no-unused-vars
+
+src\components\Navbar.jsx
+  Line 12:9:  'navigate' is assigned a value but never used  no-unused-vars
+  Line 14:9:  'isHome' is assigned a value but never used    no-unused-vars
+
+src\context\ShopContext.jsx
+  Line 38:8:  React Hook useEffect has a missing dependency: 'getProductsData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  Line 98:8:  React Hook useEffect has a missing dependency: 'fetchOrders'. Either include it or remove the dependency array      react-hooks/exhaustive-deps
+
+src\pages\About.jsx
+  Line 3:43:  'Sparkles' is defined but never used  no-unused-vars
+
+src\pages\AdminDashboard.jsx
+  Line 2:22:   'localProducts' is defined but never used                                                                          no-unused-vars
+  Line 5:130:  'Tag' is defined but never used                                                                                    no-unused-vars
+  Line 5:143:  'IndianRupee' is defined but never used                                                                            no-unused-vars
+  Line 11:53:  'apiProducts' is assigned a value but never used                                                                   no-unused-vars
+  Line 34:6:   React Hook useEffect has a missing dependency: 'fetchAllOrders'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\pages\Collection.jsx
+  Line 4:8:  'Title' is defined but never used  no-unused-vars
+
+src\pages\Contact.jsx
+  Line 3:31:  'Clock' is defined but never used  no-unused-vars
+
+src\pages\Login.jsx
+  Line 7:63:  'Github' is defined but never used  no-unused-vars
+
+

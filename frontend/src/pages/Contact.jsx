@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Phone, Mail, MapPin, Clock, Globe } from 'lucide-react'
+import { Phone, Mail, MapPin, Globe } from 'lucide-react'
 import Title from '../components/Title'
 import NewsletterBox from '../components/NewsletterBox'
 

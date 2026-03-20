@@ -1,6 +1,6 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { ShopContext } from '../context/ShopContext'
-import Title from './Title';
+
 import { toast } from 'react-toastify';
 import { Tag, Truck, ShieldCheck, Ticket, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
