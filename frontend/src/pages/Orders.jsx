@@ -2,13 +2,12 @@ import React, { useContext, useMemo, useState } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import { AuthContext } from '../context/AuthContext'
 import Title from '../components/Title';
-import { toast } from 'react-toastify';
-import { Truck, CheckCircle, Package, Clock, MapPin, ChevronRight, Receipt, CreditCard, Calendar } from 'lucide-react';
+import { Truck, CheckCircle, Package, Clock, MapPin, Receipt, CreditCard, Calendar } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Orders = () => {
 
-  const { currency, orders, updateOrder, navigate, getImageUrl, allProducts } = useContext(ShopContext);
+  const { currency, orders, navigate, getImageUrl, allProducts } = useContext(ShopContext);
   const { user } = useContext(AuthContext);
   const [trackingId, setTrackingId] = useState(null);
 

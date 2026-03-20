@@ -27,7 +27,7 @@ const Product = () => {
             setImage(Array.isArray(item.image) ? getImageUrl(item.image[0]) : getImageUrl(item.image));
             setSize('');
         }
-    }, [productId, products, apiProducts])
+    }, [productId, products, apiProducts, getImageUrl])
 
     useEffect(() => {
         fetchProductData();

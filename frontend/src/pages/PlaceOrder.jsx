@@ -25,7 +25,7 @@ const PlaceOrder = () => {
 
     const [method, setMethod] = useState('');
     const [rememberAddress, setRememberAddress] = useState(false);
-    const { navigate, setCartItems, cartItems, products, apiProducts, allProducts, placeOrder, getCartAmount, delivery_fee, backendUrl, discount, setDiscount, coupon } = useContext(ShopContext);
+    const { navigate, cartItems, allProducts, placeOrder, getCartAmount, delivery_fee, backendUrl, discount, coupon } = useContext(ShopContext);
     const { user } = useContext(AuthContext);
 
     const [formData, setFormData] = useState({
@@ -40,7 +40,6 @@ const PlaceOrder = () => {
         phone: ''
     })
 
-    const [loading, setLoading] = useState(false);
     const [orderDone, setOrderDone] = useState(false);
 
     const [savedAddresses, setSavedAddresses] = useState([]);
