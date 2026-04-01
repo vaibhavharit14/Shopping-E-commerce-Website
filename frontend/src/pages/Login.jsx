@@ -83,6 +83,20 @@ const Login = () => {
         }
     }
 
+    const handleAdminDemoLogin = async () => {
+        setLoading(true);
+        try {
+            await login('admin@forever.com', 'admin123');
+            toast.success('Admin Session Initialized');
+            // Explicitly navigate to admin panel for demo purposes
+            navigate('/admin');
+        } catch (error) {
+            toast.error('Admin Demo Access Failed');
+        } finally {
+            setLoading(false);
+        }
+    }
+
     useEffect(() => {
         if (user) {
             const redirectPath = location.state?.from || '/';
@@ -219,12 +233,20 @@ const Login = () => {
                             </motion.button>
 
                             {currentState === 'Login' && (
-                                <button 
-                                    onClick={handleDemoLogin}
-                                    className='w-full h-12 flex items-center justify-center gap-3 bg-blue-50 text-blue-600 rounded-2xl text-[10px] font-black uppercase tracking-widest border border-blue-100 hover:bg-blue-100 transition-all'
-                                >
-                                    <User size={14} /> Demo Access
-                                </button>
+                                <div className='grid grid-cols-2 gap-3'>
+                                    <button 
+                                        onClick={handleDemoLogin}
+                                        className='flex items-center justify-center gap-2 bg-blue-50 text-blue-600 h-12 rounded-2xl text-[9px] font-black uppercase tracking-widest border border-blue-100 hover:bg-blue-100 transition-all'
+                                    >
+                                        <User size={14} /> Demo User
+                                    </button>
+                                    <button 
+                                        onClick={handleAdminDemoLogin}
+                                        className='flex items-center justify-center gap-2 bg-amber-50 text-amber-600 h-12 rounded-2xl text-[9px] font-black uppercase tracking-widest border border-amber-100 hover:bg-amber-100 transition-all'
+                                    >
+                                        <ShieldCheck size={14} /> Admin Access
+                                    </button>
+                                </div>
                             )}
                         </div>
                     </div>
